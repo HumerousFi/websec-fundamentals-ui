@@ -1,43 +1,122 @@
 body{
     background-color: #070e19;
     color: white;
+    margin: 0;
     font-family: Arial, sans-serif;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 8px;
-    overflow: hidden;
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
     background-color: #050d17;
-    border-bottom: 2px solid #1f9d73;
-}
-ul li {
-    float: left;
+    border-bottom: 2px solid #238664;
 }
 
-ul li a {
-    display: block;
+.nav-links{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a{
     color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-ul li a:hover {
-    background-color: #238664;
+.nav-links a:hover{
+    color: #2ecc71;
+}
+
+h1 {
+    color: #2ecc71;
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #b0b8c5;
+    margin-bottom: 25px;
+}
+
+.report {
+    width: 90%;
+    margin: 40px auto;
 }
 
 form {
     background-color: #18212c;
-    padding: 10px;
+    padding: 25px;
+    border-radius: 10px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input,select,textarea {
+    background-color: #0d1520;
+    width: 100%;
+    border: 2px solid #238664;
+    border-radius: 6px;
+    padding: 12px;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+
+    border-color: #2ecc71;
+
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
 }
 
 .container {
     width: 80%;
-    margin: auto;
+    margin: 40px auto;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button[type="submit"]{
+    background-color: #2ecc71;
+    color: black;
+}
+
+button[type="reset"]{
+    background-color: #555;
+    color: white;
+}
+
+button:hover{
+    opacity: 0.8;
 }

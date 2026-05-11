@@ -7,49 +7,77 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <ul id="navigation">
-        <li><a href="index.html">home</a></li>
-        <li><a href="#report">report incident</a></li>
-        <li><a href="#threats">threat database</a></li>
-        <li><a href="#search">search incidents</a></li>
-    </ul>
-    <div class="report">
-        <h2>Report a Cybersecurity Incident</h2>
-        <label for="form">Please fill out the form below to report any cybersecurity incident</label>
-        <div class="container">
-            <form action="index.html">
-                <label for="Your Name">Your Name</label>
-                <input type="text" name="Your Name" placeholder="Enter your full name">
-                <label for="Email Address">Email Address</label>
-                <input type="email" name="Email Address" placeholder="Enter your email">
-                <label for="Incident-Type">Incident-Type</label>
-                <select name="Incident" id="incident-select">
-                    <option value="">Select Incident Type</option>
-                    <option value="">Phishing</option>
-                    <option value="">Malware / Ransomware</option>
-                    <option value="">Unauthorized Access</option>
-                    <option value="">DDos Attack</option>
-                    <option value="">Data Breach</option>
-                    <option value="">Other</option>
-                </select>
-                <label for="Severity-level">Severity-level</label>
-                <select name="Severity" id="Severity-select">
-                    <option value="">Select Severity Level</option>
-                    <option value="">SEV1 - Critical</option>
-                    <option value="">SEV2 - High</option>
-                    <option value="">SEV3 - Medium</option>
-                    <option value="">SEV4 - Low</option>
-                </select>
-                <label for="Description">Description</label>
-                <textarea name="Description" id="Description" rows="4" cols="50" placeholder="Provide a detailoed description of the incident..."></textarea>
-                <label for="Date & Time of Incident"></label>
-                <input type="datetime-local" name="Date & Time of Incident">
-                <label for="Upload Evidence (Screenshot, Logs, etc.)"></label>
-                <input type="file" name="Choose file">
-                <button>Submit Report</button>
-                <button>Reset</button>
-            </form>
-        </div>
-    </div>
+    <nav class="navbar">
+        <h1>CyberShield</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="#report">report incident</a></li>
+            <li><a href="#threats">threat database</a></li>
+            <li><a href="#search">search incidents</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="report" id="report">
+            <h2>Report a Cybersecurity Incident</h2>
+            <p>Please fill out the form below to report any cybersecurity incident</p>
+            <div class="container">
+                <form method="post" action="index.html">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input required id="name" type="text" name="name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input required id="email" type="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="incident-select">Incident-Type</label>
+                        <select required name="incident" id="incident-select">
+                            <option value="">Select Incident Type</option>
+                            <option value="Phishing">Phishing</option>
+                            <option value="Malware / Ransomware">Malware / Ransomware</option>
+                            <option value="Unauthorized Access">Unauthorized Access</option>
+                            <option value="DDos Attack">DDos Attack</option>
+                            <option value="Data Breach">Data Breach</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="severity-select">Severity-level</label>
+                        <select name="severity" id="severity-select">
+                            <option value="">Select Severity Level</option>
+                            <option value="SEV1 - Critical">SEV1 - Critical</option>
+                            <option value="SEV2 - High">SEV2 - High</option>
+                            <option value="SEV3 - Medium">SEV3 - Medium</option>
+                            <option value="SEV4 - Low">SEV4 - Low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea required name="description" id="description" rows="4" cols="50" placeholder="Provide a detailed description of the incident..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="incident-time">Date & Time of Incident</label>
+                        <input id="incident-time" type="datetime-local" name="incident-time">
+                    </div>
+                    <div class="form-group">
+                        <label for="upload-evidence">Upload Evidence (Screenshot, Logs, etc.)</label>
+                        <input id="upload-evidence" type="file" name="file-selector">
+                    </div>
+                    <div class="button-group">
+                        <button type="submit">Submit Report</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="threats">
+            <h2>Threat Database</h2>
+        </section>
+
+        <section id="search">
+            <h2>Search Incidents</h2>
+        </section>
+    </main>
 </body>
 </html>
